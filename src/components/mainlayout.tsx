@@ -5,6 +5,7 @@ import { IoSettingsOutline } from "react-icons/io5";
 import { MdErrorOutline, MdOutlineDashboardCustomize } from "react-icons/md";
 import { TbRoute } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
+import { Header } from "./header";
 
 interface MainLayoutProps {
   children: ReactNode;
@@ -78,8 +79,8 @@ export function MainLayout({ children }: MainLayoutProps) {
           </div>
         </div>
       </div>
-      <div>
-        <div>Header</div>
+      <div className="flex flex-1 flex-col">
+        <Header />
         <div>{children}</div>
       </div>
     </div>
