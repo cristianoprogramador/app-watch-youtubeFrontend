@@ -3,11 +3,13 @@ import logoImage from "../assets/images/login.png";
 import { FcGoogle } from "react-icons/fc";
 import { IoEyeOutline } from "react-icons/io5";
 import { IoEyeOffOutline } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 export function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   const handleSetEmail = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
@@ -57,7 +59,10 @@ export function LoginPage() {
             Forgot your password?
           </div>
 
-          <div className="text-center bg-[#0C346E] text-white font-semibold py-3 rounded-lg hover:opacity-80 cursor-pointer">
+          <div
+            className="text-center bg-[#0C346E] text-white font-semibold py-3 rounded-lg hover:opacity-80 cursor-pointer"
+            onClick={() => navigate("/home")}
+          >
             Log in
           </div>
           <div className="flex flex-row justify-center items-center gap-4">

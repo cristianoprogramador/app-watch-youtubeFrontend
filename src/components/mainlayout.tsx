@@ -79,7 +79,7 @@ export function MainLayout({ children }: MainLayoutProps) {
           </div>
         </div>
       </div>
-      <div className="flex flex-1 flex-col">
+      <div className="flex flex-1 flex-col bg-gray-100">
         <Header />
         <div>{children}</div>
       </div>
